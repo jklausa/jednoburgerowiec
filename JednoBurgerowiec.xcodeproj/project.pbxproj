@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4097C7AA24AF501F0053ED10 /* JednoBurgerowiecApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4097C7A924AF501F0053ED10 /* JednoBurgerowiecApp.swift */; };
+		4097C7AC24AF501F0053ED10 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4097C7AB24AF501F0053ED10 /* ContentView.swift */; };
+		4097C7AE24AF50210053ED10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4097C7AD24AF50210053ED10 /* Assets.xcassets */; };
+		4097C7B124AF50210053ED10 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4097C7B024AF50210053ED10 /* Preview Assets.xcassets */; };
+		4097C7BC24AF50220053ED10 /* JednoBurgerowiecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4097C7BB24AF50220053ED10 /* JednoBurgerowiecTests.swift */; };
+		4097C7C724AF50220053ED10 /* JednoBurgerowiecUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4097C7C624AF50220053ED10 /* JednoBurgerowiecUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4097C7B824AF50220053ED10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4097C79E24AF501F0053ED10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4097C7A524AF501F0053ED10;
+			remoteInfo = JednoBurgerowiec;
+		};
+		4097C7C324AF50220053ED10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4097C79E24AF501F0053ED10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4097C7A524AF501F0053ED10;
+			remoteInfo = JednoBurgerowiec;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4097C7A624AF501F0053ED10 /* JednoBurgerowiec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JednoBurgerowiec.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4097C7A924AF501F0053ED10 /* JednoBurgerowiecApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JednoBurgerowiecApp.swift; sourceTree = "<group>"; };
+		4097C7AB24AF501F0053ED10 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4097C7AD24AF50210053ED10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4097C7B024AF50210053ED10 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4097C7B224AF50210053ED10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4097C7B724AF50220053ED10 /* JednoBurgerowiecTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JednoBurgerowiecTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4097C7BB24AF50220053ED10 /* JednoBurgerowiecTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JednoBurgerowiecTests.swift; sourceTree = "<group>"; };
+		4097C7BD24AF50220053ED10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4097C7C224AF50220053ED10 /* JednoBurgerowiecUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JednoBurgerowiecUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4097C7C624AF50220053ED10 /* JednoBurgerowiecUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JednoBurgerowiecUITests.swift; sourceTree = "<group>"; };
+		4097C7C824AF50220053ED10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4097C7A324AF501F0053ED10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4097C7B424AF50220053ED10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4097C7BF24AF50220053ED10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4097C79D24AF501F0053ED10 = {
+			isa = PBXGroup;
+			children = (
+				4097C7A824AF501F0053ED10 /* JednoBurgerowiec */,
+				4097C7BA24AF50220053ED10 /* JednoBurgerowiecTests */,
+				4097C7C524AF50220053ED10 /* JednoBurgerowiecUITests */,
+				4097C7A724AF501F0053ED10 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4097C7A724AF501F0053ED10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4097C7A624AF501F0053ED10 /* JednoBurgerowiec.app */,
+				4097C7B724AF50220053ED10 /* JednoBurgerowiecTests.xctest */,
+				4097C7C224AF50220053ED10 /* JednoBurgerowiecUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4097C7A824AF501F0053ED10 /* JednoBurgerowiec */ = {
+			isa = PBXGroup;
+			children = (
+				4097C7A924AF501F0053ED10 /* JednoBurgerowiecApp.swift */,
+				4097C7AB24AF501F0053ED10 /* ContentView.swift */,
+				4097C7AD24AF50210053ED10 /* Assets.xcassets */,
+				4097C7B224AF50210053ED10 /* Info.plist */,
+				4097C7AF24AF50210053ED10 /* Preview Content */,
+			);
+			path = JednoBurgerowiec;
+			sourceTree = "<group>";
+		};
+		4097C7AF24AF50210053ED10 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4097C7B024AF50210053ED10 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4097C7BA24AF50220053ED10 /* JednoBurgerowiecTests */ = {
+			isa = PBXGroup;
+			children = (
+				4097C7BB24AF50220053ED10 /* JednoBurgerowiecTests.swift */,
+				4097C7BD24AF50220053ED10 /* Info.plist */,
+			);
+			path = JednoBurgerowiecTests;
+			sourceTree = "<group>";
+		};
+		4097C7C524AF50220053ED10 /* JednoBurgerowiecUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4097C7C624AF50220053ED10 /* JednoBurgerowiecUITests.swift */,
+				4097C7C824AF50220053ED10 /* Info.plist */,
+			);
+			path = JednoBurgerowiecUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4097C7A524AF501F0053ED10 /* JednoBurgerowiec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4097C7CB24AF50220053ED10 /* Build configuration list for PBXNativeTarget "JednoBurgerowiec" */;
+			buildPhases = (
+				4097C7A224AF501F0053ED10 /* Sources */,
+				4097C7A324AF501F0053ED10 /* Frameworks */,
+				4097C7A424AF501F0053ED10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JednoBurgerowiec;
+			productName = JednoBurgerowiec;
+			productReference = 4097C7A624AF501F0053ED10 /* JednoBurgerowiec.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4097C7B624AF50220053ED10 /* JednoBurgerowiecTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4097C7CE24AF50220053ED10 /* Build configuration list for PBXNativeTarget "JednoBurgerowiecTests" */;
+			buildPhases = (
+				4097C7B324AF50220053ED10 /* Sources */,
+				4097C7B424AF50220053ED10 /* Frameworks */,
+				4097C7B524AF50220053ED10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4097C7B924AF50220053ED10 /* PBXTargetDependency */,
+			);
+			name = JednoBurgerowiecTests;
+			productName = JednoBurgerowiecTests;
+			productReference = 4097C7B724AF50220053ED10 /* JednoBurgerowiecTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4097C7C124AF50220053ED10 /* JednoBurgerowiecUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4097C7D124AF50220053ED10 /* Build configuration list for PBXNativeTarget "JednoBurgerowiecUITests" */;
+			buildPhases = (
+				4097C7BE24AF50220053ED10 /* Sources */,
+				4097C7BF24AF50220053ED10 /* Frameworks */,
+				4097C7C024AF50220053ED10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4097C7C424AF50220053ED10 /* PBXTargetDependency */,
+			);
+			name = JednoBurgerowiecUITests;
+			productName = JednoBurgerowiecUITests;
+			productReference = 4097C7C224AF50220053ED10 /* JednoBurgerowiecUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4097C79E24AF501F0053ED10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					4097C7A524AF501F0053ED10 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					4097C7B624AF50220053ED10 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 4097C7A524AF501F0053ED10;
+					};
+					4097C7C124AF50220053ED10 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 4097C7A524AF501F0053ED10;
+					};
+				};
+			};
+			buildConfigurationList = 4097C7A124AF501F0053ED10 /* Build configuration list for PBXProject "JednoBurgerowiec" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4097C79D24AF501F0053ED10;
+			productRefGroup = 4097C7A724AF501F0053ED10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4097C7A524AF501F0053ED10 /* JednoBurgerowiec */,
+				4097C7B624AF50220053ED10 /* JednoBurgerowiecTests */,
+				4097C7C124AF50220053ED10 /* JednoBurgerowiecUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4097C7A424AF501F0053ED10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4097C7B124AF50210053ED10 /* Preview Assets.xcassets in Resources */,
+				4097C7AE24AF50210053ED10 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4097C7B524AF50220053ED10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4097C7C024AF50220053ED10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4097C7A224AF501F0053ED10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4097C7AC24AF501F0053ED10 /* ContentView.swift in Sources */,
+				4097C7AA24AF501F0053ED10 /* JednoBurgerowiecApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4097C7B324AF50220053ED10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4097C7BC24AF50220053ED10 /* JednoBurgerowiecTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4097C7BE24AF50220053ED10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4097C7C724AF50220053ED10 /* JednoBurgerowiecUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4097C7B924AF50220053ED10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4097C7A524AF501F0053ED10 /* JednoBurgerowiec */;
+			targetProxy = 4097C7B824AF50220053ED10 /* PBXContainerItemProxy */;
+		};
+		4097C7C424AF50220053ED10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4097C7A524AF501F0053ED10 /* JednoBurgerowiec */;
+			targetProxy = 4097C7C324AF50220053ED10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4097C7C924AF50220053ED10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4097C7CA24AF50220053ED10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4097C7CC24AF50220053ED10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"JednoBurgerowiec/Preview Content\"";
+				DEVELOPMENT_TEAM = QDN9ZZ7398;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = JednoBurgerowiec/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pl.klausa.JednoBurgerowiec;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4097C7CD24AF50220053ED10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"JednoBurgerowiec/Preview Content\"";
+				DEVELOPMENT_TEAM = QDN9ZZ7398;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = JednoBurgerowiec/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pl.klausa.JednoBurgerowiec;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4097C7CF24AF50220053ED10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QDN9ZZ7398;
+				INFOPLIST_FILE = JednoBurgerowiecTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pl.klausa.JednoBurgerowiecTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JednoBurgerowiec.app/JednoBurgerowiec";
+			};
+			name = Debug;
+		};
+		4097C7D024AF50220053ED10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QDN9ZZ7398;
+				INFOPLIST_FILE = JednoBurgerowiecTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pl.klausa.JednoBurgerowiecTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JednoBurgerowiec.app/JednoBurgerowiec";
+			};
+			name = Release;
+		};
+		4097C7D224AF50220053ED10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QDN9ZZ7398;
+				INFOPLIST_FILE = JednoBurgerowiecUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pl.klausa.JednoBurgerowiecUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JednoBurgerowiec;
+			};
+			name = Debug;
+		};
+		4097C7D324AF50220053ED10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QDN9ZZ7398;
+				INFOPLIST_FILE = JednoBurgerowiecUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pl.klausa.JednoBurgerowiecUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JednoBurgerowiec;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4097C7A124AF501F0053ED10 /* Build configuration list for PBXProject "JednoBurgerowiec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4097C7C924AF50220053ED10 /* Debug */,
+				4097C7CA24AF50220053ED10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4097C7CB24AF50220053ED10 /* Build configuration list for PBXNativeTarget "JednoBurgerowiec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4097C7CC24AF50220053ED10 /* Debug */,
+				4097C7CD24AF50220053ED10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4097C7CE24AF50220053ED10 /* Build configuration list for PBXNativeTarget "JednoBurgerowiecTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4097C7CF24AF50220053ED10 /* Debug */,
+				4097C7D024AF50220053ED10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4097C7D124AF50220053ED10 /* Build configuration list for PBXNativeTarget "JednoBurgerowiecUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4097C7D224AF50220053ED10 /* Debug */,
+				4097C7D324AF50220053ED10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4097C79E24AF501F0053ED10 /* Project object */;
+}
