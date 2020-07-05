@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4097C7AA24AF501F0053ED10 /* JednoBurgerowiecApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4097C7A924AF501F0053ED10 /* JednoBurgerowiecApp.swift */; };
-		4097C7AC24AF501F0053ED10 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4097C7AB24AF501F0053ED10 /* ContentView.swift */; };
+		4097C7AC24AF501F0053ED10 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4097C7AB24AF501F0053ED10 /* MainMenu.swift */; };
 		4097C7AE24AF50210053ED10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4097C7AD24AF50210053ED10 /* Assets.xcassets */; };
 		4097C7B124AF50210053ED10 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4097C7B024AF50210053ED10 /* Preview Assets.xcassets */; };
 		4097C7BC24AF50220053ED10 /* JednoBurgerowiecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4097C7BB24AF50220053ED10 /* JednoBurgerowiecTests.swift */; };
 		4097C7C724AF50220053ED10 /* JednoBurgerowiecUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4097C7C624AF50220053ED10 /* JednoBurgerowiecUITests.swift */; };
+		4097C7D524AF507F0053ED10 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 4097C7D424AF507F0053ED10 /* questions.json */; };
+		40CF7FF924B2492D00124B7B /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CF7FF824B2492D00124B7B /* QuestionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,7 @@
 /* Begin PBXFileReference section */
 		4097C7A624AF501F0053ED10 /* JednoBurgerowiec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JednoBurgerowiec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4097C7A924AF501F0053ED10 /* JednoBurgerowiecApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JednoBurgerowiecApp.swift; sourceTree = "<group>"; };
-		4097C7AB24AF501F0053ED10 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4097C7AB24AF501F0053ED10 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		4097C7AD24AF50210053ED10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4097C7B024AF50210053ED10 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4097C7B224AF50210053ED10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +47,9 @@
 		4097C7C224AF50220053ED10 /* JednoBurgerowiecUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JednoBurgerowiecUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4097C7C624AF50220053ED10 /* JednoBurgerowiecUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JednoBurgerowiecUITests.swift; sourceTree = "<group>"; };
 		4097C7C824AF50220053ED10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4097C7D424AF507F0053ED10 /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
+		4097C7D624AF51DE0053ED10 /* JednoBurgerowiec.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JednoBurgerowiec.entitlements; sourceTree = "<group>"; };
+		40CF7FF824B2492D00124B7B /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +100,13 @@
 		4097C7A824AF501F0053ED10 /* JednoBurgerowiec */ = {
 			isa = PBXGroup;
 			children = (
+				4097C7D624AF51DE0053ED10 /* JednoBurgerowiec.entitlements */,
 				4097C7A924AF501F0053ED10 /* JednoBurgerowiecApp.swift */,
-				4097C7AB24AF501F0053ED10 /* ContentView.swift */,
+				4097C7AB24AF501F0053ED10 /* MainMenu.swift */,
+				40CF7FF824B2492D00124B7B /* QuestionView.swift */,
 				4097C7AD24AF50210053ED10 /* Assets.xcassets */,
 				4097C7B224AF50210053ED10 /* Info.plist */,
+				4097C7D424AF507F0053ED10 /* questions.json */,
 				4097C7AF24AF50210053ED10 /* Preview Content */,
 			);
 			path = JednoBurgerowiec;
@@ -233,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4097C7D524AF507F0053ED10 /* questions.json in Resources */,
 				4097C7B124AF50210053ED10 /* Preview Assets.xcassets in Resources */,
 				4097C7AE24AF50210053ED10 /* Assets.xcassets in Resources */,
 			);
@@ -259,7 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4097C7AC24AF501F0053ED10 /* ContentView.swift in Sources */,
+				4097C7AC24AF501F0053ED10 /* MainMenu.swift in Sources */,
+				40CF7FF924B2492D00124B7B /* QuestionView.swift in Sources */,
 				4097C7AA24AF501F0053ED10 /* JednoBurgerowiecApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +427,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = JednoBurgerowiec/JednoBurgerowiec.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"JednoBurgerowiec/Preview Content\"";
 				DEVELOPMENT_TEAM = QDN9ZZ7398;
@@ -429,8 +440,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pl.klausa.JednoBurgerowiec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -439,6 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = JednoBurgerowiec/JednoBurgerowiec.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"JednoBurgerowiec/Preview Content\"";
 				DEVELOPMENT_TEAM = QDN9ZZ7398;
@@ -451,8 +464,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pl.klausa.JednoBurgerowiec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};

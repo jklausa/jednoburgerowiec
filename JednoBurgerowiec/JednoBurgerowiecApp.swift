@@ -9,9 +9,32 @@ import SwiftUI
 
 @main
 struct JednoBurgerowiecApp: App {
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainMenu(questions: Question.allQuestions())
         }
+    }
+
+}
+
+struct Question: Codable {
+    let text: String
+
+    let answers: [String]
+    let correctAnswerIndex: Int
+
+    enum CodingKeys: String, CodingKey {
+        case text = "questionText"
+        case answers
+        case correctAnswerIndex = "correct_answer_index"
+    }
+
+    static func allQuestions() -> [Question] {
+        let bundleFile = Bundle.main.url(forResource: "questions", withExtension: "json")
+
+        let jsonDecoder = JSONDecoder()
+
+        return try! jsonDecoder.decode([Question].self, from: try! .init(contentsOf: bundleFile!))
     }
 }
