@@ -21,13 +21,13 @@ struct QuestionView: View {
         // does it solve the problem we're having here in a simple way? also yes
         switch index {
         case 0:
-            return "A:"
+            return "A"
         case 1:
-            return "B:"
+            return "B"
         case 2:
-            return "C:"
+            return "C"
         case 3:
-            return "D:"
+            return "D"
         default:
             return "wat"
         }
@@ -35,40 +35,22 @@ struct QuestionView: View {
 
     var body: some View {
         VStack {
+
             Spacer()
                 .frame(height: 20)
+
             Text(question.text)
                 .padding()
                 .font(Font.title.bold())
                 .foregroundColor(.white)
 
             Spacer()
+
             ForEach(Array(question.answers.shuffled().enumerated()), id: \.element) { index, answer in
-                HStack {
-                    Text(convertIndexToString(index: index))
-                        .foregroundColor(.yellow)
-                        .padding()
-
-                    Button(action: {
-                        self.answerCallback(self.isCorrect(answer: answer, for: self.question))
-                    }) {
-                        Text(answer)
-                            .multilineTextAlignment(.center)
-                            .font(Font.title2.bold())
-                            .foregroundColor(.black)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.white)
-                            .cornerRadius(15)
-                            //.overlay(
-                              //  RoundedRectangle(cornerRadius: 15, style: .continuous)
-                                //    .stroke(Color.red, lineWidth: 3))
-                            .padding()
-                            .padding(.vertical, -10)
-                    }
+                AnswerButton(answer: answer, circleText: convertIndexToString(index: index)) { self.answerCallback(self.isCorrect(answer: answer, for: self.question))
                 }
-
             }
+
             Spacer()
                 .frame(height: 20)
         }
@@ -81,9 +63,55 @@ struct QuestionView: View {
         .cornerRadius(20)
         .padding(.horizontal, 20)
         .padding(.vertical, 10)
-        .shadow(radius: 4)
+
+    }
+}
+
+struct AnswerButton: View {
+
+    let answer: String
+    let circleText: String
+
+    let action: () -> Void
+
+    var body: some View {
+        HStack() {
+            Spacer()
+                .frame(width: 5)
+
+            CircleLabel(text: circleText)
+
+            Spacer()
+
+            Text(answer)
+                .multilineTextAlignment(.center)
+                .font(Font.title2.bold())
+                .foregroundColor(.black)
+                .padding()
+
+        }
+        .frame(maxWidth: .infinity)
+        .frame(alignment: .leading)
+        .background(Capsule()
+                        .foregroundColor(.white))
+        .padding()
+        .padding(.vertical, -15)
     }
 
+}
+
+struct CircleLabel: View {
+
+    let text: String
+
+    var body: some View {
+        Text(text)
+            .font(Font.headline.bold())
+            .foregroundColor(.yellow)
+            .padding()
+            .background(Circle()
+                            .foregroundColor(.black))
+    }
 
 }
 

@@ -15,7 +15,7 @@ struct MainMenu: View {
         VStack {
             Spacer()
             Text("JednoBurgerowiec")
-                .font(.largeTitle)
+                .font(Font.largeTitle.bold())
                 .shadow(radius: 2)
                 .foregroundColor(.white)
                 .padding()
@@ -23,14 +23,16 @@ struct MainMenu: View {
                 .font(.subheadline)
                 .foregroundColor(.white)
             Spacer()
-            Button("Just fuck me up") {
-                dump("fuck me up")
-                return
-            }
-            .padding()
-            .padding(.horizontal, 30)
-            .background(Color.white)
-            .cornerRadius(100)
+            NavigationLink(
+                destination: QuestionView(question: questions.first!, answerCallback: { _ in
+                    return
+                }),
+                label: {
+                    Text("all shit")
+                        .modifier(BigButtonViewModifier())
+                })
+
+
             Text("Go through the entire body of test questions, randomized.")
                 .padding()
             Button("Practice test") {
@@ -48,16 +50,19 @@ struct MainMenu: View {
                maxWidth: .infinity,
                minHeight: 0,
                maxHeight: .infinity)
-        .background(Color(Constants.backgroundColor))
+        .background(Color.black)
         .edgesIgnoringSafeArea(.all)
     }
+}
 
-    private enum Constants {
-        static let backgroundColor = UIColor(displayP3Red: 1,
+private struct BigButtonViewModifier: ViewModifier {
 
-                                             green: 0,
-                                             blue: 0,
-                                             alpha: 1)
+    func body(content: Content) -> some View {
+        content
+            .padding()
+            .padding(.horizontal, 30)
+            .background(Color.white)
+            .cornerRadius(100)
     }
 }
 
