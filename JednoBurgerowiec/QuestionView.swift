@@ -87,7 +87,9 @@ struct AnswerButton: View {
                 Spacer()
 
                 Text(answer)
+                    .lineLimit(4)
                     .multilineTextAlignment(.center)
+                    .minimumScaleFactor(0.4)
                     .font(Font.title2.bold())
                     .foregroundColor(.black)
                     .padding()
@@ -114,7 +116,6 @@ struct CircleLabel: View {
     var body: some View {
         Text(text)
             .font(Font.headline.bold())
-            .minimumScaleFactor(0.6)
             .foregroundColor(.yellow)
             .padding()
             .background(Circle()
