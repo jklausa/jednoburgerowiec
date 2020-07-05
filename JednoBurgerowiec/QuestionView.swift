@@ -16,28 +16,56 @@ struct QuestionView: View {
         question.answers.firstIndex(of: answer) == question.correctAnswerIndex
     }
 
+    func convertIndexToString(index: Int) -> String {
+        // Is this a horrible hack? yes.
+        // does it solve the problem we're having here in a simple way? also yes
+        switch index {
+        case 0:
+            return "A:"
+        case 1:
+            return "B:"
+        case 2:
+            return "C:"
+        case 3:
+            return "D:"
+        default:
+            return "wat"
+        }
+    }
+
     var body: some View {
         VStack {
             Spacer()
                 .frame(height: 20)
             Text(question.text)
-                .font(.title)
-                .lineLimit(10)
+                .padding()
+                .font(Font.title.bold())
                 .foregroundColor(.white)
 
             Spacer()
-            ForEach(question.answers.shuffled(), id: \.self) { answer in
-                Button(action: {
-                    self.answerCallback(self.isCorrect(answer: answer, for: self.question))
-                }) {
-                    Text(answer)
+            ForEach(Array(question.answers.shuffled().enumerated()), id: \.element) { index, answer in
+                HStack {
+                    Text(convertIndexToString(index: index))
+                        .foregroundColor(.yellow)
                         .padding()
-                        .frame(maxWidth: .infinity)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 15, style: .continuous)
-                                .stroke(Color.purple, lineWidth: 5))
-                        .padding(.horizontal, 20)
-                        .padding(.vertical, 5)
+
+                    Button(action: {
+                        self.answerCallback(self.isCorrect(answer: answer, for: self.question))
+                    }) {
+                        Text(answer)
+                            .multilineTextAlignment(.center)
+                            .font(Font.title2.bold())
+                            .foregroundColor(.black)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.white)
+                            .cornerRadius(15)
+                            //.overlay(
+                              //  RoundedRectangle(cornerRadius: 15, style: .continuous)
+                                //    .stroke(Color.red, lineWidth: 3))
+                            .padding()
+                            .padding(.vertical, -10)
+                    }
                 }
 
             }
@@ -48,7 +76,7 @@ struct QuestionView: View {
                maxWidth: .infinity,
                minHeight: 0,
                maxHeight: .infinity)
-        .background(Color.green)
+        .background(Color.black)
         .edgesIgnoringSafeArea(.all)
         .cornerRadius(20)
         .padding(.horizontal, 20)
