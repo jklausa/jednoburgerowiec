@@ -77,30 +77,32 @@ struct AnswerButton: View {
     let action: () -> Void
 
     var body: some View {
-        HStack() {
-            Spacer()
-                .frame(width: 5)
+        Button(action: action) {
+            HStack() {
+                Spacer()
+                    .frame(width: 5)
 
-            CircleLabel(text: circleText)
+                CircleLabel(text: circleText)
 
-            Spacer()
+                Spacer()
 
-            Text(answer)
-                .multilineTextAlignment(.center)
-                .font(Font.title2.bold())
-                .foregroundColor(.black)
-                .padding()
+                Text(answer)
+                    .multilineTextAlignment(.center)
+                    .font(Font.title2.bold())
+                    .foregroundColor(.black)
+                    .padding()
 
-            Spacer()
-                .frame(width: 5)
+                Spacer()
+                    .frame(width: 5)
 
+            }
+            .frame(maxWidth: .infinity)
+            .frame(alignment: .leading)
+            .background(Capsule()
+                            .foregroundColor(.white))
+            .padding()
+            .padding(.vertical, -12)
         }
-        .frame(maxWidth: .infinity)
-        .frame(alignment: .leading)
-        .background(Capsule()
-                        .foregroundColor(.white))
-        .padding()
-        .padding(.vertical, -12)
     }
 
 }
