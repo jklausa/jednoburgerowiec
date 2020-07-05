@@ -41,8 +41,10 @@ struct QuestionView: View {
 
             Text(question.text)
                 .padding()
+                .minimumScaleFactor(0.6)
                 .font(Font.title.bold())
                 .foregroundColor(.white)
+
 
             Spacer()
 
@@ -89,13 +91,16 @@ struct AnswerButton: View {
                 .foregroundColor(.black)
                 .padding()
 
+            Spacer()
+                .frame(width: 5)
+
         }
         .frame(maxWidth: .infinity)
         .frame(alignment: .leading)
         .background(Capsule()
                         .foregroundColor(.white))
         .padding()
-        .padding(.vertical, -15)
+        .padding(.vertical, -12)
     }
 
 }
@@ -107,6 +112,7 @@ struct CircleLabel: View {
     var body: some View {
         Text(text)
             .font(Font.headline.bold())
+            .minimumScaleFactor(0.6)
             .foregroundColor(.yellow)
             .padding()
             .background(Circle()
