@@ -18,11 +18,15 @@ struct JednoBurgerowiecApp: App {
 
 }
 
-struct Question: Codable {
+struct Question: Codable, Identifiable {
     let text: String
 
     let answers: [String]
     let correctAnswerIndex: Int
+
+    var id: String {
+        return text
+    }
 
     enum CodingKeys: String, CodingKey {
         case text = "questionText"

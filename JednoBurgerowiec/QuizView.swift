@@ -22,12 +22,20 @@ struct QuizView: View {
                         .bold()
                         .smallCaps())
 
-            QuestionView(question: questions[index]) { correct in
-                if correct {
-                    score = score + 1
-                }
+            GeometryReader { geo in
+                ScrollView(.horizontal) {
+                    LazyHStack {
+                        ForEach(questions) { question in
+                            QuestionView(question: question) { correct in
+                                if correct {
+                                    score = score + 1
+                                }
 
-                index = index + 1
+                                index = index + 1
+                            }.frame(width: geo.size.width)
+                        }
+                    }
+                }
             }
 
             Text("Question \(String(index + 1)) / \(questions.count)")
