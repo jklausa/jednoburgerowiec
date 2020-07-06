@@ -32,7 +32,7 @@ maybe later
 ## ok, but how did u get the questions tho
 
 the bamf ("Bundesamt für Migration und Flüchtlinge"") helpfully publishes
-a (full list)[bamf], so that was easy. haha gotchu, it's a horrible pdf, 
+a [full list](bamf), so that was easy. haha gotchu, it's a horrible pdf, 
 and i am not touching scraping PDFs with a ten-foot pole.
 
 instead i scraped questions from some third-party site that helps you prepare.
