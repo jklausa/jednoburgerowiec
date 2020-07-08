@@ -10,7 +10,22 @@ import SwiftUI
 struct QuestionView: View {
 
     let question: Question
+    let shuffledAnswers: [String]
+    // We can't shuffle the answers on-demand inside `body`, since then
+    // every time the view gets re-rendered it'll have a different ordering, which
+    // makes it impossible for us to mark answers as correct.
+
     let answerCallback: (Bool) -> Void
+
+    @State private var answered: Bool = false
+    @State private var pickedAnswerShuffledIndex: Int? = nil
+
+    internal init(question: Question, answerCallback: @escaping (Bool) -> Void) {
+        self.question = question
+        self.answerCallback = answerCallback
+
+        self.shuffledAnswers = question.answers.shuffled()
+    }
 
     func isCorrect(answer: String, for question: Question) -> Bool {
         question.answers.firstIndex(of: answer) == question.correctAnswerIndex
@@ -48,8 +63,13 @@ struct QuestionView: View {
 
             Spacer()
 
-            ForEach(Array(question.answers.shuffled().enumerated()), id: \.element) { index, answer in
-                AnswerButton(answer: answer, circleText: convertIndexToString(index: index)) { self.answerCallback(self.isCorrect(answer: answer, for: self.question))
+            ForEach(Array(shuffledAnswers.enumerated()),
+                    id: \.element) { index, answer in
+
+                AnswerButton(answer: answer,
+                             circleText: convertIndexToString(index: index),
+                             state: answerButtonState(for: answer)) {
+                                handleAnswerTap(answer: answer)
                 }
             }
 
@@ -65,14 +85,50 @@ struct QuestionView: View {
         .cornerRadius(20)
         .padding(.horizontal, 20)
         .padding(.vertical, 10)
-
     }
+
+    private func answerButtonState(for answer: String) -> AnswerButton.State {
+        guard answered, let answeredIndex = pickedAnswerShuffledIndex else {
+            return .normal
+        }
+
+        if isCorrect(answer: answer, for: question) {
+            return .correct
+        }
+
+        if shuffledAnswers[answeredIndex] == answer {
+            return .pickedAndWrong
+        }
+
+        return .normal
+    }
+
+    private func handleAnswerTap(answer: String) {
+        answered = true
+        pickedAnswerShuffledIndex = shuffledAnswers.firstIndex(of: answer)!
+
+        answerCallback(isCorrect(answer: answer, for: question))
+    }
+
+
 }
 
 struct AnswerButton: View {
 
+    enum State {
+        case normal
+
+        case pickedAndWrong
+        // We don't need to differentiate between "correct" and "picked, and correct" states,
+        // since they're visually indistinguishable, hence why this case is named so weirdly
+        // as to not to be ambiguous what `picked` means
+
+        case correct
+    }
+
     let answer: String
     let circleText: String
+    let state: State
 
     let action: () -> Void
 
@@ -82,7 +138,7 @@ struct AnswerButton: View {
                 Spacer()
                     .frame(width: 5)
 
-                CircleLabel(text: circleText)
+                CircleLabel(text: circleContent)
 
                 Spacer()
 
@@ -101,12 +157,34 @@ struct AnswerButton: View {
             .frame(maxWidth: .infinity)
             .frame(alignment: .leading)
             .background(Capsule()
-                            .foregroundColor(.white))
+                            .foregroundColor(capsuleColor))
             .padding()
             .padding(.vertical, -12)
+
         }
     }
 
+    private var circleContent: String {
+        switch state {
+        case .normal:
+            return circleText
+        case .pickedAndWrong:
+            return "❌"
+        case .correct:
+            return "✅"
+        }
+    }
+
+    private var capsuleColor: Color {
+        switch state {
+        case .normal:
+            return .white
+        case .pickedAndWrong:
+            return .red
+        case .correct:
+            return .green
+        }
+    }
 }
 
 struct CircleLabel: View {

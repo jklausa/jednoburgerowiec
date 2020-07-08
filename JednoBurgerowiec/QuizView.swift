@@ -14,6 +14,8 @@ struct QuizView: View {
     @State private var score: Int = 0
     @State private var index: Int = 0
 
+    @State private var shouldShowSummary: Bool = false
+
     var body: some View {
         VStack {
             Text("\(String(score)) answered correctly, \(correctAnswerPercentageLabel)%")
@@ -22,20 +24,27 @@ struct QuizView: View {
                         .bold()
                         .smallCaps())
 
-            GeometryReader { geo in
-                ScrollView(.horizontal) {
-                    LazyHStack {
-                        ForEach(questions) { question in
-                            QuestionView(question: question) { correct in
-                                if correct {
-                                    score = score + 1
-                                }
 
-                                index = index + 1
-                            }.frame(width: geo.size.width)
+                // https://iosdevelopers.slack.com/archives/CKA5E2RRC/p1594026027046700
+
+            if shouldShowSummary {
+                ResultView(score: score, numberOfQuestions: questions.count)
+            } else {
+                /*GeometryReader { geo in
+                    ScrollView(.horizontal) {
+                        LazyHStack {
+                            ForEach(questions) { question in*/
+                                QuestionView(question: questions[index]) { correct in
+                                    if correct {
+                                        score = score + 1
+                                    }
+
+                                    advanceQuestion()
+                                }/*.frame(width: geo.size.width)
+                            }
                         }
                     }
-                }
+                }*/
             }
 
             Text("Question \(String(index + 1)) / \(questions.count)")
@@ -44,6 +53,16 @@ struct QuizView: View {
                         .bold()
                         .smallCaps())
         }
+    }
+
+    private func advanceQuestion() {
+        guard index + 1 < questions.endIndex else {
+            shouldShowSummary = true
+
+            return
+        }
+
+        index = index + 1
     }
 
     var correctAnswerPercentageLabel: String {

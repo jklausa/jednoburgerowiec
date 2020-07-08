@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		406293B924B265A6008CD7D3 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406293B824B265A6008CD7D3 /* QuizView.swift */; };
+		4079973524B5ACFA0024792B /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4079973424B5ACFA0024792B /* ResultView.swift */; };
 		4097C7AA24AF501F0053ED10 /* JednoBurgerowiecApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4097C7A924AF501F0053ED10 /* JednoBurgerowiecApp.swift */; };
 		4097C7AC24AF501F0053ED10 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4097C7AB24AF501F0053ED10 /* MainMenu.swift */; };
 		4097C7AE24AF50210053ED10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4097C7AD24AF50210053ED10 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		406293B824B265A6008CD7D3 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		4079973424B5ACFA0024792B /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		4097C7A624AF501F0053ED10 /* JednoBurgerowiec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JednoBurgerowiec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4097C7A924AF501F0053ED10 /* JednoBurgerowiecApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JednoBurgerowiecApp.swift; sourceTree = "<group>"; };
 		4097C7AB24AF501F0053ED10 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				4097C7A924AF501F0053ED10 /* JednoBurgerowiecApp.swift */,
 				4097C7AB24AF501F0053ED10 /* MainMenu.swift */,
 				406293B824B265A6008CD7D3 /* QuizView.swift */,
+				4079973424B5ACFA0024792B /* ResultView.swift */,
 				40CF7FF824B2492D00124B7B /* QuestionView.swift */,
 				4097C7AD24AF50210053ED10 /* Assets.xcassets */,
 				4097C7B224AF50210053ED10 /* Info.plist */,
@@ -273,6 +276,7 @@
 			files = (
 				4097C7AC24AF501F0053ED10 /* MainMenu.swift in Sources */,
 				406293B924B265A6008CD7D3 /* QuizView.swift in Sources */,
+				4079973524B5ACFA0024792B /* ResultView.swift in Sources */,
 				40CF7FF924B2492D00124B7B /* QuestionView.swift in Sources */,
 				4097C7AA24AF501F0053ED10 /* JednoBurgerowiecApp.swift in Sources */,
 			);
