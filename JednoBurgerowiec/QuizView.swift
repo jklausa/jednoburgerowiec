@@ -33,15 +33,10 @@ struct QuizView: View {
             if shouldShowSummary {
                 ResultView(score: score, numberOfQuestions: questionStates.count)
             } else {
-                GeometryReader { geo in
-                    ScrollView(.horizontal) {
-                        LazyHStack {
-                            ForEach(questionStates) { question in
-                                QuestionView(question: questionBinding(for: question)) {
-                                    advanceQuestion()
-                                }.frame(width: geo.size.width)
-                            }
-                        }
+                // This is... surprisingly robust? other than an animation glitch (fires twice on swipe), i'm surprised how well it works
+                ModelPages(questionStates, currentPage: $index, hasControl: false) { pageIndex, question in
+                    QuestionView(question: $questionStates[pageIndex]) {
+                        advanceQuestion()
                     }
                 }
             }
@@ -52,14 +47,6 @@ struct QuizView: View {
                         .bold()
                         .smallCaps())
         }
-    }
-
-    private func questionBinding(for question: QuestionState) -> Binding<QuestionState> {
-        guard let index = questionStates.firstIndex(where: { $0.question == question.question} ) else {
-            fatalError("whoops")
-        }
-
-        return $questionStates[index]
     }
 
     private func advanceQuestion() {
