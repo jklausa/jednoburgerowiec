@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,6 @@
 		4097C7C724AF50220053ED10 /* JednoBurgerowiecUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4097C7C624AF50220053ED10 /* JednoBurgerowiecUITests.swift */; };
 		4097C7D524AF507F0053ED10 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 4097C7D424AF507F0053ED10 /* questions.json */; };
 		40A3F0B724BF6FA70004C88A /* AnswersBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A3F0B624BF6FA70004C88A /* AnswersBlock.swift */; };
-		40A3F0BA24BF9E700004C88A /* Pages in Frameworks */ = {isa = PBXBuildFile; productRef = 40A3F0B924BF9E700004C88A /* Pages */; };
 		40CF7FF924B2492D00124B7B /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CF7FF824B2492D00124B7B /* QuestionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40A3F0BA24BF9E700004C88A /* Pages in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +164,6 @@
 			);
 			name = JednoBurgerowiec;
 			packageProductDependencies = (
-				40A3F0B924BF9E700004C88A /* Pages */,
 			);
 			productName = JednoBurgerowiec;
 			productReference = 4097C7A624AF501F0053ED10 /* JednoBurgerowiec.app */;
@@ -240,7 +237,6 @@
 			);
 			mainGroup = 4097C79D24AF501F0053ED10;
 			packageReferences = (
-				40A3F0B824BF9E700004C88A /* XCRemoteSwiftPackageReference "Pages" */,
 			);
 			productRefGroup = 4097C7A724AF501F0053ED10 /* Products */;
 			projectDirPath = "";
@@ -614,25 +610,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		40A3F0B824BF9E700004C88A /* XCRemoteSwiftPackageReference "Pages" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/nachonavarro/Pages";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.5;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		40A3F0B924BF9E700004C88A /* Pages */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 40A3F0B824BF9E700004C88A /* XCRemoteSwiftPackageReference "Pages" */;
-			productName = Pages;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4097C79E24AF501F0053ED10 /* Project object */;
 }

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Pages
 
 struct QuizView: View {
 
@@ -27,18 +26,22 @@ struct QuizView: View {
                         .bold()
                         .smallCaps())
 
-
-                // https://iosdevelopers.slack.com/archives/CKA5E2RRC/p1594026027046700
-
             if shouldShowSummary {
                 ResultView(score: score, numberOfQuestions: questionStates.count)
             } else {
-                // This is... surprisingly robust? other than an animation glitch (fires twice on swipe), i'm surprised how well it works
-                ModelPages(questionStates, currentPage: $index, hasControl: false) { pageIndex, question in
-                    QuestionView(question: $questionStates[pageIndex]) {
-                        advanceQuestion()
+
+                TabView(selection: $index) {
+
+                    ForEach(Array(questionStates.enumerated()), id: \.element) { pageIndex, _ in
+
+                        QuestionView(question: $questionStates[pageIndex]) {
+                            advanceQuestion()
+                        }
+                        .tag(pageIndex)
+
                     }
                 }
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             }
 
             Text("Question \(String(index + 1)) / \(questionStates.count)")
@@ -56,15 +59,19 @@ struct QuizView: View {
             return
         }
 
-        index = index + 1
+        withAnimation {
+            index = index + 1
+        }
     }
 
     var correctAnswerPercentageLabel: String {
-        guard index != 0 else {
+        let questionsAnswered = questionStates.lazy.filter { $0.answered }.count
+
+        guard questionsAnswered > 0 else {
             return "0"
         }
 
-        let fractionCorrect = Double(score) / Double(index)
+        let fractionCorrect = Double(score) / Double(questionsAnswered)
         let percentageCorrect = fractionCorrect * 100
 
         return String(Int(percentageCorrect.rounded()))
@@ -75,7 +82,7 @@ struct QuizView: View {
     }
 }
 
-struct QuestionState: Identifiable {
+struct QuestionState: Identifiable, Hashable {
     let question: String
 
     let answers: [String]
