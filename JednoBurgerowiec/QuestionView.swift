@@ -9,29 +9,8 @@ import SwiftUI
 
 struct QuestionView: View {
 
-    let question: Question
-    let answerCallback: (Bool) -> Void
-
-    func isCorrect(answer: String, for question: Question) -> Bool {
-        question.answers.firstIndex(of: answer) == question.correctAnswerIndex
-    }
-
-    func convertIndexToString(index: Int) -> String {
-        // Is this a horrible hack? yes.
-        // does it solve the problem we're having here in a simple way? also yes
-        switch index {
-        case 0:
-            return "A"
-        case 1:
-            return "B"
-        case 2:
-            return "C"
-        case 3:
-            return "D"
-        default:
-            return "wat"
-        }
-    }
+    @Binding var question: QuestionState
+    let answerCallback: () -> Void
 
     var body: some View {
         VStack {
@@ -39,7 +18,7 @@ struct QuestionView: View {
             Spacer()
                 .frame(height: 20)
 
-            Text(question.text)
+            Text(question.question)
                 .padding()
                 .minimumScaleFactor(0.6)
                 .font(Font.title.bold())
@@ -48,9 +27,9 @@ struct QuestionView: View {
 
             Spacer()
 
-            ForEach(Array(question.answers.shuffled().enumerated()), id: \.element) { index, answer in
-                AnswerButton(answer: answer, circleText: convertIndexToString(index: index)) { self.answerCallback(self.isCorrect(answer: answer, for: self.question))
-                }
+            AnswersBlock(questionState: question) {
+                question.answer(index: $0)
+                answerCallback()
             }
 
             Spacer()
@@ -65,72 +44,34 @@ struct QuestionView: View {
         .cornerRadius(20)
         .padding(.horizontal, 20)
         .padding(.vertical, 10)
-
-    }
-}
-
-struct AnswerButton: View {
-
-    let answer: String
-    let circleText: String
-
-    let action: () -> Void
-
-    var body: some View {
-        Button(action: action) {
-            HStack() {
-                Spacer()
-                    .frame(width: 5)
-
-                CircleLabel(text: circleText)
-
-                Spacer()
-
-                Text(answer)
-                    .lineLimit(4)
-                    .multilineTextAlignment(.center)
-                    .minimumScaleFactor(0.4)
-                    .font(Font.title2.bold())
-                    .foregroundColor(.black)
-                    .padding()
-
-                Spacer()
-                    .frame(width: 5)
-
-            }
-            .frame(maxWidth: .infinity)
-            .frame(alignment: .leading)
-            .background(Capsule()
-                            .foregroundColor(.white))
-            .padding()
-            .padding(.vertical, -12)
-        }
     }
 
 }
 
-struct CircleLabel: View {
-
-    let text: String
-
-    var body: some View {
-        Text(text)
-            .font(Font.headline.bold())
-            .foregroundColor(.yellow)
-            .padding()
-            .background(Circle()
-                            .foregroundColor(.black))
-    }
-
-}
 
 struct QuestionView_Previews: PreviewProvider {
-    static var previews: some View {
-        let question = Question.allQuestions().randomElement()!
 
-        return QuestionView(question: question) { correct in
-            dump("correct")
-            return
+    static var randomQuestion: Question {
+        Question.allQuestions().randomElement()!
+    }
+
+    static var previews: some View {
+        StatefulPreviewWrapper(QuestionState(question: randomQuestion)) {
+            QuestionView(question: $0) { return }
         }
+    }
+}
+
+struct StatefulPreviewWrapper<Value, Content: View>: View {
+    @State var value: Value
+    var content: (Binding<Value>) -> Content
+
+    var body: some View {
+        content($value)
+    }
+
+    init(_ value: Value, content: @escaping (Binding<Value>) -> Content) {
+        self._value = State(wrappedValue: value)
+        self.content = content
     }
 }

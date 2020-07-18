@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		406293B924B265A6008CD7D3 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406293B824B265A6008CD7D3 /* QuizView.swift */; };
+		4079973524B5ACFA0024792B /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4079973424B5ACFA0024792B /* ResultView.swift */; };
 		4097C7AA24AF501F0053ED10 /* JednoBurgerowiecApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4097C7A924AF501F0053ED10 /* JednoBurgerowiecApp.swift */; };
 		4097C7AC24AF501F0053ED10 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4097C7AB24AF501F0053ED10 /* MainMenu.swift */; };
 		4097C7AE24AF50210053ED10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4097C7AD24AF50210053ED10 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 		4097C7BC24AF50220053ED10 /* JednoBurgerowiecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4097C7BB24AF50220053ED10 /* JednoBurgerowiecTests.swift */; };
 		4097C7C724AF50220053ED10 /* JednoBurgerowiecUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4097C7C624AF50220053ED10 /* JednoBurgerowiecUITests.swift */; };
 		4097C7D524AF507F0053ED10 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 4097C7D424AF507F0053ED10 /* questions.json */; };
+		40A3F0B724BF6FA70004C88A /* AnswersBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A3F0B624BF6FA70004C88A /* AnswersBlock.swift */; };
 		40CF7FF924B2492D00124B7B /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CF7FF824B2492D00124B7B /* QuestionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		406293B824B265A6008CD7D3 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		4079973424B5ACFA0024792B /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		4097C7A624AF501F0053ED10 /* JednoBurgerowiec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JednoBurgerowiec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4097C7A924AF501F0053ED10 /* JednoBurgerowiecApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JednoBurgerowiecApp.swift; sourceTree = "<group>"; };
 		4097C7AB24AF501F0053ED10 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		4097C7C824AF50220053ED10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4097C7D424AF507F0053ED10 /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		4097C7D624AF51DE0053ED10 /* JednoBurgerowiec.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JednoBurgerowiec.entitlements; sourceTree = "<group>"; };
+		40A3F0B624BF6FA70004C88A /* AnswersBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersBlock.swift; sourceTree = "<group>"; };
 		40CF7FF824B2492D00124B7B /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +110,9 @@
 				4097C7A924AF501F0053ED10 /* JednoBurgerowiecApp.swift */,
 				4097C7AB24AF501F0053ED10 /* MainMenu.swift */,
 				406293B824B265A6008CD7D3 /* QuizView.swift */,
+				4079973424B5ACFA0024792B /* ResultView.swift */,
 				40CF7FF824B2492D00124B7B /* QuestionView.swift */,
+				40A3F0B624BF6FA70004C88A /* AnswersBlock.swift */,
 				4097C7AD24AF50210053ED10 /* Assets.xcassets */,
 				4097C7B224AF50210053ED10 /* Info.plist */,
 				4097C7D424AF507F0053ED10 /* questions.json */,
@@ -157,6 +163,8 @@
 			dependencies = (
 			);
 			name = JednoBurgerowiec;
+			packageProductDependencies = (
+			);
 			productName = JednoBurgerowiec;
 			productReference = 4097C7A624AF501F0053ED10 /* JednoBurgerowiec.app */;
 			productType = "com.apple.product-type.application";
@@ -228,6 +236,8 @@
 				Base,
 			);
 			mainGroup = 4097C79D24AF501F0053ED10;
+			packageReferences = (
+			);
 			productRefGroup = 4097C7A724AF501F0053ED10 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -272,7 +282,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4097C7AC24AF501F0053ED10 /* MainMenu.swift in Sources */,
+				40A3F0B724BF6FA70004C88A /* AnswersBlock.swift in Sources */,
 				406293B924B265A6008CD7D3 /* QuizView.swift in Sources */,
+				4079973524B5ACFA0024792B /* ResultView.swift in Sources */,
 				40CF7FF924B2492D00124B7B /* QuestionView.swift in Sources */,
 				4097C7AA24AF501F0053ED10 /* JednoBurgerowiecApp.swift in Sources */,
 			);
